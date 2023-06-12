@@ -6,12 +6,13 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 const router = require('./router');
 const PORT = process.env.PORT || 5000;
+const ORGI = process.env.ORG
 
 app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: " http://localhost:3000",
+        origin: ORGI,
         methods: ["GET", "POST"],
     },
 });
