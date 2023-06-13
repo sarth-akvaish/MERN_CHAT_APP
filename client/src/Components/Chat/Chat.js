@@ -14,7 +14,7 @@ const Chat = () => {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = process.env.BASE_URL;
+  const ENDPOINT = 'http://localhost:5000';
 
   const location = useLocation();
   useEffect(() => {
