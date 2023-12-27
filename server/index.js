@@ -11,7 +11,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://mern-chat-app2-sigma.vercel.app/",
+        origin: "http://localhost:3000",
         methods: ["GET", "POST"],
     },
 });
