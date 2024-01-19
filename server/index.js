@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "*",
         methods: ["GET", "POST"],
     },
-
+    
 });
 
 app.use(cors());
@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
         const user = getUser(socket.id);
 
 
-        io.to(user.room).emit('message', { user: user.name, text: message });
+        io.to(user.room).emit('message' , { user: user.name, text: message });
         io.to(user.room).emit('roomData', { room: user.room, users: getUserInRoom(user.room) });
 
         callback();
