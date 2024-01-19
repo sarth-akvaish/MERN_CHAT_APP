@@ -14,7 +14,7 @@ const Chat = () => {
   const [room, setRoom] = useState("");
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'https://mern-chat-mksea9c4y-sarth-akvaish.vercel.app/';
+  const ENDPOINT = 'https://mern-chat-i19xlmyi4-sarth-akvaish.vercel.app/';
   // const ENDPOINT = 'https://mernchatappbackend-8ngn.onrender.com/';
 
   const location = useLocation();
